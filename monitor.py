@@ -73,8 +73,7 @@ def check_stock():
                 f"🔗 快速前往：{TARGET_URL}"
             )
         elif soldout_elem:
-            print("測試發送通知...")
-            send_telegram("🧪 這是一則測試通知！你的 iPhone 推播與機器人設定完全正常！")
+            print("狀態正常：商品頁 (Z0277) 連線正常，目前顯示為黃色【售 完】。")
         else:
             print("未能辨識狀態，請檢查網頁。")
 
