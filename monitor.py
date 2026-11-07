@@ -147,4 +147,11 @@ def check_stock():
         print(f"監控檢查時發生錯誤: {e}")
 
 if __name__ == "__main__":
-    check_stock()
+    TOTAL_CHECKS = 10     # 檢查 10 次
+    INTERVAL = 180       # 每次間隔 180 秒（3 分鐘）
+
+    for i in range(1, TOTAL_CHECKS + 1):
+        print(f"[{i}/{TOTAL_CHECKS}] 執行檢查...")
+        check_stock()
+        if i < TOTAL_CHECKS:
+            time.sleep(INTERVAL)
